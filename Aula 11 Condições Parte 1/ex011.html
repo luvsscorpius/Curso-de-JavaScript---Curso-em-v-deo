@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local de nascimento</title>
+</head>
+<body>
+    <h1>Local de nascimento</h1>
+    Digite o local onde você nasceu: <input type="text" name="txtlocal" id="loc">
+    <input type="button" value="Verificar" onclick="verificar()">
+
+    <div id="res">
+        Resultado
+    </div>
+
+    <script>
+        function verificar(){
+            let loc = window.document.querySelector('input#loc').value //Colocar .value no final de uma variável que pega uma string ajuda a nao dar erro
+            let res = window.document.querySelector('div#res')
+            if (loc == 'Brasil'){
+                res.innerHTML = `<p>Você digitou ${loc} então você é <strong>Brasileiro</strong></p>`
+            } else {
+                res.innerHTML = `<p>Você digitou ${loc} então você é <strong>Estrangeiro</strong></p>`
+            }
+        }
+    </script>
+</body>
+</html>
